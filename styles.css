@@ -129,7 +129,14 @@ p, li, h1, h2, h3, summary, blockquote { word-break: auto-phrase; }
 }
 .btn:focus-visible { outline: 3px solid var(--cta-deep); outline-offset: 3px; }
 
-.btn-sm { padding: 0.6em 1.4em; font-size: 0.8125rem; box-shadow: none; }
+/* 狭い画面でボタンが縮んで文字が折り返し、名前と重なるのを防ぐ */
+.btn-sm {
+  padding: 0.6em 1.4em;
+  font-size: 0.8125rem;
+  box-shadow: none;
+  white-space: nowrap;
+  flex: none;
+}
 .btn-lg { padding: 1.15em 3em; font-size: 1.0625rem; }
 
 @media (max-width: 480px) {
@@ -175,9 +182,17 @@ p, li, h1, h2, h3, summary, blockquote { word-break: auto-phrase; }
   font-size: 0.9375rem;
   letter-spacing: 0.08em;
   white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .brand-role { color: var(--ink-muted); font-size: 0.8125rem; }
 @media (max-width: 560px) { .brand-role { display: none; } }
+
+/* かなり狭い端末では、アイコンとボタンを少し小さくして収める */
+@media (max-width: 380px) {
+  .brand-icon { width: 36px; height: 36px; }
+  .btn-sm { padding: 0.55em 1.1em; font-size: 0.75rem; }
+}
 
 /* ========================= ヒーロー ========================= */
 .hero {
