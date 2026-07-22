@@ -167,16 +167,6 @@ p, li, h1, h2, h3, summary, blockquote { word-break: auto-phrase; }
   text-decoration: none;
   min-width: 0;
 }
-/* 切り抜いたイラストを丸く収める */
-.brand-icon {
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  background: var(--pale-blue);
-  object-fit: cover;
-  object-position: 50% 12%;
-  flex: none;
-}
 .brand-name {
   font-family: var(--serif);
   font-size: 0.9375rem;
@@ -188,9 +178,8 @@ p, li, h1, h2, h3, summary, blockquote { word-break: auto-phrase; }
 .brand-role { color: var(--ink-muted); font-size: 0.8125rem; }
 @media (max-width: 560px) { .brand-role { display: none; } }
 
-/* かなり狭い端末では、アイコンとボタンを少し小さくして収める */
+/* かなり狭い端末では、ボタンを少し小さくして収める */
 @media (max-width: 380px) {
-  .brand-icon { width: 36px; height: 36px; }
   .btn-sm { padding: 0.55em 1.1em; font-size: 0.75rem; }
 }
 
