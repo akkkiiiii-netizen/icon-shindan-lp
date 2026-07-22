@@ -233,17 +233,21 @@ p, li, h1, h2, h3, summary, blockquote { word-break: auto-phrase; }
   color: var(--cta-deep);
 }
 
-/* 人物のうしろの、やわらかい光 */
-.hero-photo, .profile-photo { position: relative; }
-.hero-photo .halo, .profile-photo .halo {
+/* ヒーローの水彩イラストは背景を切り抜き済みなので、そのまま置くだけ */
+.hero-photo { position: relative; }
+.hero-photo img { width: 100%; }
+
+/* プロフィールの人物は、うしろにやわらかい光を敷く */
+.profile-photo { position: relative; }
+.profile-photo .halo {
   position: absolute;
-  inset: 6% 2% 10%;
+  inset: 4% 0 8%;
   border-radius: 50%;
   background: radial-gradient(circle, rgba(255, 255, 255, 0.95) 30%, rgba(244, 241, 234, 0.5) 62%, transparent 72%);
 }
-/* 元画像は人物の腰のあたりで切れているので、下側をふわっと消して
+/* 人物イラストは腰のあたりで切れているので、下側をふわっと消して
    はっきりした切断線が出ないようにする */
-.hero-photo img, .profile-photo img {
+.profile-photo img {
   position: relative;
   width: 100%;
   -webkit-mask-image: linear-gradient(to bottom, #000 76%, transparent 98%);
@@ -259,7 +263,8 @@ p, li, h1, h2, h3, summary, blockquote { word-break: auto-phrase; }
     gap: 0.5rem;
     text-align: center;
   }
-  .hero-photo { order: -1; width: min(44%, 172px); margin-inline: auto; }
+  /* 縦長のイラストなので、幅は正方形のときより控えめにする */
+  .hero-photo { order: -1; width: min(36%, 142px); margin-inline: auto; }
   .eyebrow { margin-bottom: 0.75rem; }
   .hero h1 {
     margin-bottom: 1rem;
