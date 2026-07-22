@@ -99,8 +99,14 @@
 - [x] お客様の声の掲載許可を確認する → **許可済み。表示してよい**
 - [x] LP本体を作る（`index.html` / `styles.css`）
 - [x] 画像を用意（切り抜き・カルテ・ファビコン・OGP）
-- [ ] GitHubへ保存 → Vercelで公開
-- [ ] 公開後、`index.html` に `og:url` と `og:image`（絶対URL）を追記する
+- [x] GitHubへ保存 → Vercelで公開（2026-07-22 完了）
+- [x] `og:url` と `og:image`（絶対URL）を追記
+
+## 公開情報
+
+- **公開URL**：https://icon-shindan-lp.vercel.app
+- **リポジトリ**：https://github.com/akkkiiiii-netizen/icon-shindan-lp
+- `main` に push すると Vercel が自動でデプロイする。以降の修正は編集→commit→push だけでよい。
 
 ---
 
